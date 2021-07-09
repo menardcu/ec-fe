@@ -2,7 +2,9 @@
 <nav class="navbar docs-navbar is-spaced has-shadow">
     <div class="container">
         <div class="navbar-brand">
-            <img alt="Vue logo" src="../assets/logo.png">
+            <a href="/" title="logo">
+                <img alt="Logo" src="../assets/logo.png">
+            </a>
         </div>
     </div>
 </nav>
