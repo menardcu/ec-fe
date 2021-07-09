@@ -1,16 +1,26 @@
 import Vue from 'vue'
+import VueCookies from 'vue-cookies';
 import App from './App.vue'
 import Buefy from "buefy";
 import "buefy/dist/buefy.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faStar } from '@fortawesome/free-regular-svg-icons'
 
-library.add(faStar)
+import { faCheck, faCheckCircle, faInfoCircle, faExclamationTriangle, faExclamationCircle,
+    faArrowUp, faAngleRight, faAngleLeft, faAngleDown, faEye, faEyeSlash, faCaretDown, 
+    faCaretUp, faUpload, faStar, faGlobeAsia, faWallet, faSearch} from "@fortawesome/free-solid-svg-icons";
 
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+library.add(faCheck, faCheckCircle, faInfoCircle, faExclamationTriangle, faExclamationCircle,
+    faArrowUp, faAngleRight, faAngleLeft, faAngleDown, faEye, faEyeSlash, faCaretDown, 
+    faCaretUp, faUpload, faStar, faGlobeAsia, faWallet, faSearch);
+Vue.component('vue-fontawesome', FontAwesomeIcon);
 
-Vue.use(Buefy);
+Vue.use(VueCookies);
+
+Vue.use(Buefy, {
+  defaultIconComponent: 'vue-fontawesome',
+  defaultIconPack: 'fas',
+});
 Vue.config.productionTip = false
 
 new Vue({
